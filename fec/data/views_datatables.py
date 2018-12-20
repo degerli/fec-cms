@@ -176,13 +176,3 @@ def reports(request, form_type):
         'columns': constants.table_columns['reports-' + form_type.lower()]
     })
 
-
-def individual_contributions(request):
-    return render(request, 'datatable.jinja', {
-        'parent': 'data',
-        'result_type': 'receipts',
-        'title': 'Individual contributions',
-        'slug': 'individual-contributions',
-        'dates': utils.date_ranges(),
-        'columns': constants.table_columns['individual-contributions']
-    })
